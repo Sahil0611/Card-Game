@@ -1,1 +1,2 @@
 # Card-Game
+Welcome to our card game "Match It Up"! In this game, players will be challenged to match the numbers on each card to create pairs. The game is designed to test your memory and matching skills as you race against the clock to find all the matching pairs. This README file will provide you with all the information you need to get started, including the rules of the game, how to play, and any additional instructions. Get ready to put your memory to the test and see if you have what it takes to become the ultimate "Match It Up" champion!
