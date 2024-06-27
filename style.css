@@ -46,6 +46,7 @@ body {
   }
   .card.flipped {
     background-color: #fff;
+    transform: perspective(500px) rotateY(360deg);
   }
   .heading{
     display: flex;
