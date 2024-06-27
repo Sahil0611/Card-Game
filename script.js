@@ -6,21 +6,13 @@ let canFlip = true; //flag to control if card can be flipped.
 function createCard(number) {
   const card = document.createElement("div");
   card.classList.add("card"); //add the card class to the element.
-  // card.addEventListener("mouseover", () => {
-  //   card.textContent="Click to Open"
-  //   card.style.fontSize = "18px"
-  // });
-  // card.addEventListener("mouseout", () => {
-  //   card.textContent = '???';
-  //   card.style.fontSize = '';
-  // });
   card.dataset.number = number; //set the data attributr number to store the card values.
   card.textContent = "???";
-  card.addEventListener("click", flipCard); //call flipcard when clicked.
+  card.addEventListener("click", flipCard);//call flipcard when clicked.
   return card;
 }
 
-function flipCard() {
+function flipCard(){
   if (
     !canFlip ||
     flippedCards.length >= 2 ||
@@ -38,8 +30,11 @@ function flipCard() {
   if (flippedCards.length === 2) {
     //call check match if two card flipped.
     checkMatch();
+
   }
 }
+
+
 
 function checkMatch() {
   canFlip = false; //disable card flipping while checking.
@@ -62,12 +57,22 @@ function checkMatch() {
 }
 
 function initGame() {
-  const gameBoard = document.querySelector(".game-board"); //select the game board element.
-  numbers.sort(() => Math.random() - 0.5); //suffles the no. array.
+  const gameBoard = document.querySelector(".game-board");
+  gameBoard.innerHTML = ""; // Clear the game board
+  numbers.sort(() => Math.random() - 0.5);
   numbers.forEach((number) => {
-    const card = createCard(number); //create a card for each number
-    gameBoard.appendChild(card); //adds the card to the game board
+    const card = createCard(number);
+    gameBoard.appendChild(card);
   });
 }
 
-initGame(); //call the init game to start the game.
+function resetGame() {
+  flippedCards = [];
+  matchedCards = [];
+  canFlip = true;
+  initGame();
+}
+
+document.getElementById("reset-button").addEventListener("click", resetGame);
+
+initGame();
