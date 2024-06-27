@@ -23,6 +23,7 @@ body {
     border-radius: 30px;
     box-shadow: 3px 3px 3px 3px black;
   }
+ 
   .card {
     display: flex;
     justify-content: center;
@@ -113,4 +114,36 @@ body {
         width: 50px;
         height: 45px;
     }
+}
+
+#reset-button{
+  background-color: #ff550cda;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  box-sizing: border-box;
+  border: 0;
+  margin-top: 30px;
+  padding: 14px;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#reset-button:not(:disabled):hover,
+#reset-button:not(:disabled):focus {
+  outline: 0;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+#reset-button:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
 }
