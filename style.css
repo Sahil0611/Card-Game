@@ -39,7 +39,6 @@ body {
     border-radius: 13px;
   }
   .card:hover {
-    transform: perspective(500px) rotateY(360deg) scale(1.07);
     text-align: center;
     box-shadow: 3px 2px 3px rgba(60, 60, 60, 0.607)
   }
